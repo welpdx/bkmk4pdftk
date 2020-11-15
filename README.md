@@ -1,4 +1,3 @@
-
 # bkmk4pdftk
 While pdftk is great at adding bookmarks to a pdf, many (including me) find it's format tedious. This project tries to generate a pdftk format bookmark file from a table in google sheets using GAS (Google Sheet Scripts). Simply recreate the table of contents in one tab, run a script, and bam, you can download the pdftk file to add onto your pdf. 
 
@@ -6,7 +5,8 @@ Basically the polar opposite of [this](https://www.excelforum.com/excel-general/
 
 # What does it do?
 I find it easier to copy the Table of Contents from a pdf [by Alt + Click -> Drag to select the text and copying it on a table](https://i.imgur.com/CYP0NnK.gif). 
-The macro script basically gathers the data and puts it to the pdftk bookmark format.
+Then, use the macro to gather the data and export it to a pdftk bookmark formatted text file. See gif below for what this macro does.
+
 ![see this](https://i.imgur.com/lQX2AQy.gif)
 
 
