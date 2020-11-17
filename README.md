@@ -13,14 +13,18 @@ Then, use the macro to gather the data and export it to a pdftk bookmark formatt
 
 
 # How to Use It?
-Click on this [link](https://docs.google.com/spreadsheets/d/1AJ9z0AeNveEFjIprDpgNhG4L1pTATZVlLQgXHA0RqJQ/edit?usp=sharing) to view and duplicate the spreadsheet with the macro scripts. 
+1. Click on this [link](https://docs.google.com/spreadsheets/d/1AJ9z0AeNveEFjIprDpgNhG4L1pTATZVlLQgXHA0RqJQ/edit?usp=sharing) to view and duplicate the spreadsheet with the macro scripts. 
 
 <details>
         <summary>Or follow these instructions to create your own spreadsheet with the GAS. </summary>
-Create a **new** Google spreadsheet, click Tools > Script editor... then copy and paste the contents of the interday.gs file (see above) into the script editor and save. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Fitbit" menu at the top.
-
+Create a **new** Google spreadsheet, click Tools > Script editor... then copy and paste the contents of the interday.gs file (see above) into the script editor and save. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overridden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Menu" menu at the top.
 </details>
 
+2. Input your data to the table manually. Just copy and paste the page number, title into the table. Adjust the level as you see fit.
+3. Click on Menu and then dataToText. This function will gather the data in each row and appends the data into pdftk format text.
+4. Goto the `bookmark_input` tab and check things look good. If not, you can always change the values in the table and run the dataToText again.
+5. Click on Menu and then ExportToTextFile. This function will convert the blocks of text on `bookmark_output` into a text file for download or copy pasting.
+6. See below on how to use this text file for pdftk or pdfWriteBookmarks to add bookmarks onto your pdf. 
 
 
 
@@ -33,6 +37,6 @@ I'm sure those those who are reading this already know what pdftk is. But in cau
 4. Put your pdf file and your text file in the same folder. Start a command prompt in that folder path and enter the following code:
 `pdftk [input_file.pdf] update_info [bookmarks.txt] output [output_file.pdf]`
 For more info, read [this](https://www.pdflabs.com/blog/export-and-import-pdf-bookmarks/).
-5. A good alternative to pdftk for this function is [pdfWriteBookmarks](https://github.com/goerz/pdfWriteBookmarks). Usage:
+5. A good alternative to using pdftk is [pdfWriteBookmarks](https://github.com/goerz/pdfWriteBookmarks). Usage:
 `java -jar pdfWriteBookmarks.jar [input_file.pdf] [bookmarks.txt] [output.pdf]`
 7. Done! 
