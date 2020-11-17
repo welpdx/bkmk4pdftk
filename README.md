@@ -40,3 +40,8 @@ For more info, read [this](https://www.pdflabs.com/blog/export-and-import-pdf-bo
 5. A good alternative to using pdftk is [pdfWriteBookmarks](https://github.com/goerz/pdfWriteBookmarks). Usage:
 `java -jar pdfWriteBookmarks.jar [input_file.pdf] [bookmarks.txt] [output.pdf]`
 7. Done! 
+
+
+# Todo
+- Add page offset function the google sheet in case pasted page number is not the actual page number in the pdf. 
+- Make the same sheet w/ macros in Excel using VBA
